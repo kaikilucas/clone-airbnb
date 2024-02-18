@@ -22,27 +22,27 @@ function App() {
             <img src={Close} className="max-w-3 max-h-3 " alt="React logo" />
           </div>
         </nav> */}
-        <div className=" w-full h-[120px]  px-[52px]  border">
-          <nav className="grid grid-cols-3 my-[11px]">
+        <div className=" w-full h-[168px]  px-[52px]  border">
+          <nav className="grid grid-cols-3 ">
             <div className="border flex items-center">
-              <img src={airbnb} className="w-[70px] h-[30px]" alt="logo" />
+              <img src={airbnb} className="w-[118px] h-[64px]" alt="logo" />
             </div>
-            <div className="flex justify-center border font-semibold  text-[11px] my-auto">
-              <button>Acomodações teste</button>
+            <div className="flex justify-center border font-semibold h-[48px]  text-[16px] my-auto">
+              <button>Acomodações</button>
               <button className="mx-5">Experiências</button>
               <button>Experiências online</button>
             </div>
-            <div className="border grid grid-cols-3 ">
-              <nav className="col-span-2 flex justify-end w-[330px]">
-                <button className="border text-[11px] font-semibold text-[9px] ">
+            <div className="border grid grid-cols-3 justify-end  h-[80px]">
+              <nav className="col-span-2 flex justify-end items-center w-[304px] ">
+                <button className="border flex  items-center font-semibold h-[42px] text-[14px] ">
                   Anuncie seu espaço no Airbnb
-                </button>
-                <button className="border mx-[10px]">
-                  <img src={icon} alt="icon1" className="max-w-3 max-h-3" />
+                  <button className="border flex mx-[10px]">
+                    <img src={icon} alt="icon1" className="max-w-3 max-h-3" />
+                  </button>
                 </button>
               </nav>
-              <nav className="border flex justify-end ">
-                <button className="border flex justify-center items-center w-[50px] h-[30px] rounded-full flex  ">
+              <nav className="border flex justify-end items-center w-[130px] ">
+                <button className="border flex justify-center items-center w-[86px] h-[48px] rounded-full  ">
                   <img
                     className="max-w-3 max-h-3 mx-[4px]"
                     src={icon2}
