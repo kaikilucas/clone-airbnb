@@ -28,7 +28,7 @@ function App() {
               <img src={airbnb} className="w-[70px] h-[30px]" alt="logo" />
             </div>
             <div className="flex justify-center border font-semibold  text-[11px] my-auto">
-              <button>Acomodações</button>
+              <button>Acomodações teste</button>
               <button className="mx-5">Experiências</button>
               <button>Experiências online</button>
             </div>
