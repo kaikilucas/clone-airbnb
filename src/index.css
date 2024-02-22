@@ -2,3 +2,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.header {
+  @apply w-full h-[100px] sm:h-[258px] sticky top-0 border bg-white;
+}
+
+.camada {
+  @apply w-full  h-[168px] sm:px-[80px]  sm:border;
+}
+
+.nav {
+  @apply flex sm:justify-between justify-center gap-10 h-[100px] sm:h-[80px] items-center sm:mt-0;
+}
+
+.lista {
+  @apply hidden sm:flex flex w-full justify-center font-semibold h-[48px] items-center  text-[16px] my-auto;
+}
+
+.logo {
+  @apply items-center flex justify-end sm:justify-start sm:w-full;
+}
