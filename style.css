@@ -9,3 +9,7 @@ body {
 article {
   margin-bottom: 20px;
 }
+
+input {
+  outline: 0;
+}

@@ -70,11 +70,29 @@ export default function Navbar() {
           </div>
         </nav>
         <div className=" flex justify-center items-center hidden sm:flex  ">
-          <nav className="w-[853px] flex justify-between  border rounded-full h-[66px]">
-            <button className=" rounded-full w-full">1</button>
-            <button className=" rounded-full w-full">2</button>
-            <button className=" rounded-full w-full">3</button>
-            <button className=" rounded-full w-full">4</button>
+          <nav className=" flex  border  rounded-full h-[66px] shadow-md">
+            <button className=" hover:rounded-full w-[284px]  flex flex-col  justify-center hover:border p-[2px] ">
+              <label
+                className="font-semibold cursor-pointer ml-8  text-[12px]"
+                for="campo"
+              >
+                {" "}
+                Onde
+              </label>
+              <input
+                id="campo"
+                className=" w-[218px] h-[18px] text-[14px] ml-8"
+                type="search"
+                placeholder="Buscar destinos"
+              />
+            </button>
+            <button className=" rounded-full  hover:border w-[142.5px] ">
+              2
+            </button>
+            <button className=" rounded-full  hover:border w-[142.5px] ">
+              3
+            </button>
+            <button className=" rounded-full  hover:border w-[284px]">4</button>
           </nav>
         </div>
       </div>
