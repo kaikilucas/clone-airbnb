@@ -1,10 +1,45 @@
 import React from "react";
 import airbnb from "../assets/airbnb.svg";
 import { Globe, List, User } from "@phosphor-icons/react";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [isHoveredB1, setIsHoveredB1] = useState(false);
+  const [isHoveredB2, setIsHoveredB2] = useState(false);
+  const [isHoveredB3, setIsHoveredB3] = useState(false);
+
+  const handleMouseEnterB1 = () => {
+    setIsHoveredB1(true);
+    setIsHoveredB2(false);
+    setIsHoveredB3(false);
+  };
+
+  const handleMouseEnterB2 = () => {
+    setIsHoveredB1(true);
+    setIsHoveredB2(true);
+    setIsHoveredB3(false);
+  };
+
+  const handleMouseEnterB3 = () => {
+    setIsHoveredB1(false);
+    setIsHoveredB2(true);
+    setIsHoveredB3(true);
+  };
+
+  const handleMouseEnterB4 = () => {
+    setIsHoveredB1(false);
+    setIsHoveredB2(false);
+    setIsHoveredB3(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHoveredB1(false);
+    setIsHoveredB2(false);
+    setIsHoveredB3(false);
+  };
+
   return (
-    <header className="header">
+    <header id="aqui" className="header">
       {/* <nav className=" h-[70px] grid grid-cols-3  bg-neutral-100 ">
       <div className="h-full col-start-2 col-span-1 flex items-center justify-center ">
         <span className="text-neutral-700 text-xs font-['Poppins']">
@@ -70,29 +105,75 @@ export default function Navbar() {
           </div>
         </nav>
         <div className=" flex justify-center items-center hidden sm:flex  ">
-          <nav className=" flex  border  rounded-full h-[66px] shadow-md">
-            <button className=" hover:rounded-full w-[284px]  flex flex-col  justify-center hover:border p-[2px] ">
+          <nav className="flex  border  rounded-full h-[66px] shadow-md">
+            <button
+              onMouseEnter={handleMouseEnterB1}
+              onMouseLeave={handleMouseLeave}
+              id="b1"
+              className=" hover:rounded-full w-[284px]  flex flex-col hover:bg-stone-100  justify-center hover:border p-[2px] "
+            >
               <label
                 className="font-semibold cursor-pointer ml-8  text-[12px]"
-                for="campo"
+                htmlFor="campo"
               >
                 {" "}
                 Onde
               </label>
               <input
                 id="campo"
-                className=" w-[218px] h-[18px] text-[14px] ml-8"
+                className=" w-[218px] h-[18px] text-[14px] ml-8 "
                 type="search"
                 placeholder="Buscar destinos"
               />
             </button>
-            <button className=" rounded-full  hover:border w-[142.5px] ">
+            <div
+              id="l1"
+              className={`flex items-center h-[60px] ${
+                isHoveredB1 ? "hidden" : ""
+              }`}
+            >
+              <div className="linha border h-[30px] "></div>
+            </div>
+            <button
+              onMouseEnter={handleMouseEnterB2}
+              onMouseLeave={handleMouseLeave}
+              id="b2"
+              className=" rounded-full  hover:border w-[142.5px]  hover:bg-stone-100"
+            >
               2
             </button>
-            <button className=" rounded-full  hover:border w-[142.5px] ">
+            <div
+              id="l2"
+              className={`flex items-center h-[60px] ${
+                isHoveredB2 ? "hidden" : ""
+              }`}
+            >
+              <div className="linha border h-[30px] "></div>
+            </div>
+            <button
+              onMouseEnter={handleMouseEnterB3}
+              onMouseLeave={handleMouseLeave}
+              id="b3"
+              className=" rounded-full  hover:border w-[142.5px]  hover:bg-stone-100"
+            >
               3
             </button>
-            <button className=" rounded-full  hover:border w-[284px]">4</button>
+            <div
+              id="l3"
+              className={`flex items-center h-[60px] ${
+                isHoveredB3 ? "hidden" : ""
+              }`}
+            >
+              <div className="linha border h-[30px] "></div>
+            </div>
+            <button
+              onMouseEnter={handleMouseEnterB4}
+              onMouseLeave={handleMouseLeave}
+              id="b4"
+              className=" rounded-full  hover:border w-[284px]  hover:bg-stone-100"
+            >
+              4
+            </button>
           </nav>
         </div>
       </div>
@@ -119,3 +200,27 @@ export default function Navbar() {
     </header>
   );
 }
+
+// const btn1 = document.getElementById("b1");
+// const btn2 = document.getElementById("b2");
+// const btn3 = document.getElementById("b3");
+// const btn4 = document.getElementById("b4");
+
+// const linha1 = document.getElementById("l1");
+// const linha2 = document.getElementById("l2");
+// const linha3 = document.getElementById("l3");
+
+// btn1.addEventListener("mouseover", () => {
+//   linha1.classList.toggle("hidden");
+// });
+
+// btn3.addEventListener("mouseover", () => {
+//   linha2.classList.toggle("hidden");
+//   linha3.classList.toggle("hidden");
+//   // linha1.className += "hidden ";
+// });
+
+// btn4.addEventListener("mouseover", () => {
+//   linha3.classList.toggle("hidden");
+//   // linha1.className += "hidden ";
+// });

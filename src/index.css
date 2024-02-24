@@ -22,3 +22,16 @@
 .logo {
   @apply items-center flex justify-end sm:justify-start sm:w-full;
 }
+
+input[type="search"] {
+  outline: none;
+  background: none;
+}
+
+input[type="search"]::placeholder {
+  color: darkgray;
+}
+
+article {
+  margin-bottom: 20px;
+}
