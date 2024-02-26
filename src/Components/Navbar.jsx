@@ -1,7 +1,8 @@
 import React from "react";
 import airbnb from "../assets/airbnb.svg";
-import { Globe, List, User } from "@phosphor-icons/react";
+import { Globe, List, User, MagnifyingGlass } from "@phosphor-icons/react";
 import { useState } from "react";
+import "./Navbar.css";
 
 export default function Navbar() {
   const [isHoveredB1, setIsHoveredB1] = useState(false);
@@ -56,46 +57,49 @@ export default function Navbar() {
     </nav> */}
       <div className="camada">
         <nav className="nav">
-          <div className="logo">
+          <a href="#" className="logo">
             <img
               src={airbnb}
               className="w-[80px] sm:w-[118px] h-[64px] "
               alt="logo"
             />
-          </div>
+          </a>
 
           <ul className="lista">
-            <li>
+            <li className="font-semibold">
               <a href="#">Acomodações</a>
             </li>
-            <li>
-              <a href="#" className="mx-5">
+            <li className="hover:rounded-full hover:bg-stone-100 w-[130px] h-[40px] justify-center items-center flex ml-2 ">
+              <a href="#" className="mx-5 ">
                 Experiências
               </a>
             </li>
-            <li>
+            <li className="hover:rounded-full hover:bg-stone-100  w-[160px] h-[40px] justify-center items-center flex">
               <a href="#">Experiências online</a>
             </li>
           </ul>
 
           <div className="w-[50px] sm:w-full  items-center flex justify-center sm:justify-end  h-[80px]  ">
             <ul className="flex sm:justify-end items-center gap-2 ">
-              <li className="hidden sm:block">
+              <li className="hidden sm:block  hover:rounded-full hover:bg-stone-100  ">
                 <a
                   href="#"
-                  className=" w-[250px] flex items-center justify-end text-right font-semibold  text-[14px] "
+                  className=" w-[220px] h-[30px] flex items-center justify-center text-right font-semibold   text-[14px] "
                 >
                   Anuncie seu espaço no Airbnb
                 </a>
               </li>
-              <li className="hidden sm:block">
-                <a href="#" className=" mx-[10px]">
+              <li className="hidden sm:block  hover:rounded-full h-[30px] w-[40px]  hover:bg-stone-100">
+                <a
+                  href="#"
+                  className=" flex justify-center items-center h-[30px]"
+                >
                   {" "}
-                  <Globe size={20} />
+                  <Globe size={19} className="" />
                 </a>
               </li>
               <li>
-                <button className="border flex items-center justify-center w-[86px]  h-[48px] rounded-full  ">
+                <button className="border flex items-center justify-center w-[86px]  h-[48px] rounded-full hover:shadow-md  ">
                   <li className="flex flex-rom gap-2 ">
                     <List size={20} /> <User size={20} />
                   </li>
@@ -138,9 +142,20 @@ export default function Navbar() {
               onMouseEnter={handleMouseEnterB2}
               onMouseLeave={handleMouseLeave}
               id="b2"
-              className=" rounded-full  hover:border w-[142.5px]  hover:bg-stone-100"
+              className=" rounded-full  hover:border w-[142.5px]  hover:bg-stone-100  flex flex-col justify-center"
             >
-              2
+              <label
+                className="font-semibold cursor-pointer ml-8  text-[12px]"
+                htmlFor="campo2"
+              >
+                Check-in
+              </label>
+              <input
+                className=" w-[218px] h-[18px] text-[14px] ml-8"
+                type="text"
+                placeholder="insira as datas"
+                id="campo2"
+              />
             </button>
             <div
               id="l2"
@@ -154,9 +169,20 @@ export default function Navbar() {
               onMouseEnter={handleMouseEnterB3}
               onMouseLeave={handleMouseLeave}
               id="b3"
-              className=" rounded-full  hover:border w-[142.5px]  hover:bg-stone-100"
+              className=" rounded-full  hover:border w-[142.5px]  hover:bg-stone-100 flex flex-col justify-center "
             >
-              3
+              <label
+                className="font-semibold cursor-pointer ml-8  text-[12px]"
+                htmlFor="campo3"
+              >
+                Chackout
+              </label>
+              <input
+                className=" w-[218px] h-[18px] text-[14px] ml-8"
+                type="text"
+                placeholder="Insira as datas"
+                id="campo3"
+              />
             </button>
             <div
               id="l3"
@@ -170,9 +196,28 @@ export default function Navbar() {
               onMouseEnter={handleMouseEnterB4}
               onMouseLeave={handleMouseLeave}
               id="b4"
-              className=" rounded-full  hover:border w-[284px]  hover:bg-stone-100"
+              className=" rounded-full flex hover:border  h-[66px] w-[284px] items-center hover:bg-stone-100"
             >
-              4
+              <div className=" flex  justify-start w-[230px] flex-wrap ">
+                <label
+                  className="font-semibold cursor-pointer ml-8  text-[12px]    "
+                  htmlFor="campo3"
+                >
+                  Quem
+                </label>
+
+                <input
+                  className=" w-[218px] h-[18px] text-[14px] ml-8 flex justify-start "
+                  type="text"
+                  placeholder="Hóspedes?"
+                  id="campo3"
+                />
+              </div>
+              <div className=" flex rounded-full justify-center w-[50px] h-[50px]  items-center bg-red-500 hover:bg-red-600">
+                <div className="">
+                  <MagnifyingGlass size={20} color="white" />
+                </div>
+              </div>
             </button>
           </nav>
         </div>
