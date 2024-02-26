@@ -8,6 +8,11 @@ export default function Navbar() {
   const [isHoveredB1, setIsHoveredB1] = useState(false);
   const [isHoveredB2, setIsHoveredB2] = useState(false);
   const [isHoveredB3, setIsHoveredB3] = useState(false);
+  const [isHoveredI1, setIsHoveredI1] = useState(false);
+
+  const handleMouseEnterI1 = () => {
+    setIsHoveredI1(true);
+  };
 
   const handleMouseEnterB1 = () => {
     setIsHoveredB1(true);
@@ -37,6 +42,7 @@ export default function Navbar() {
     setIsHoveredB1(false);
     setIsHoveredB2(false);
     setIsHoveredB3(false);
+    setIsHoveredI1(false);
   };
 
   return (
@@ -175,7 +181,7 @@ export default function Navbar() {
                 className="font-semibold cursor-pointer ml-8  text-[12px]"
                 htmlFor="campo3"
               >
-                Chackout
+                Checkout
               </label>
               <input
                 className=" w-[218px] h-[18px] text-[14px] ml-8"
@@ -193,29 +199,41 @@ export default function Navbar() {
               <div className="linha border h-[30px] "></div>
             </div>
             <button
-              onMouseEnter={handleMouseEnterB4}
-              onMouseLeave={handleMouseLeave}
-              id="b4"
-              className=" rounded-full flex hover:border  h-[66px] w-[284px] items-center hover:bg-stone-100"
+              className={` flex rounded-full  hover:border hover:bg-stone-100 ${
+                isHoveredI1 ? "hover:border-none hover:bg-white" : ""
+              } `}
             >
-              <div className=" flex  justify-start w-[230px] flex-wrap ">
-                <label
-                  className="font-semibold cursor-pointer ml-8  text-[12px]    "
-                  htmlFor="campo3"
-                >
-                  Quem
-                </label>
+              <nav
+                onMouseEnter={handleMouseEnterB4}
+                onMouseLeave={handleMouseLeave}
+                id="b4"
+                className=" flex h-[66px] w-[224px] items-center "
+              >
+                <div className=" flex  justify-start w-[230px] flex-wrap ">
+                  <label
+                    className="font-semibold cursor-pointer ml-8  text-[12px]    "
+                    htmlFor="campo3"
+                  >
+                    Quem
+                  </label>
 
-                <input
-                  className=" w-[218px] h-[18px] text-[14px] ml-8 flex justify-start "
-                  type="text"
-                  placeholder="Hóspedes?"
-                  id="campo3"
-                />
-              </div>
-              <div className=" flex rounded-full justify-center w-[50px] h-[50px]  items-center bg-red-500 hover:bg-red-600">
-                <div className="">
-                  <MagnifyingGlass size={20} color="white" />
+                  <input
+                    className=" w-[218px] h-[18px] text-[14px] ml-8 flex justify-start "
+                    type="text"
+                    placeholder="Hóspedes?"
+                    id="campo3"
+                  />
+                </div>
+              </nav>
+              <div
+                onMouseEnter={handleMouseEnterI1}
+                onMouseLeave={handleMouseLeave}
+                className="w-[60px]  h-[66px] flex items-center justify-end rounded-full  "
+              >
+                <div className=" flex rounded-full justify-center w-[48px]  h-[48px]  items-center bg-red-500 hover:bg-red-600 mr-[6px] ">
+                  <div>
+                    <MagnifyingGlass size={20} color="white" />
+                  </div>
                 </div>
               </div>
             </button>
