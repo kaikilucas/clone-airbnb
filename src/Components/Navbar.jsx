@@ -142,7 +142,7 @@ export default function Navbar() {
                 isHoveredB1 ? "hidden" : ""
               }`}
             >
-              <div className="linha border h-[30px] "></div>
+              <div className="linha border-l h-[30px] "></div>
             </div>
             <button
               onMouseEnter={handleMouseEnterB2}
@@ -169,7 +169,7 @@ export default function Navbar() {
                 isHoveredB2 ? "hidden" : ""
               }`}
             >
-              <div className="linha border h-[30px] "></div>
+              <div className="linha border-l h-[30px] "></div>
             </div>
             <button
               onMouseEnter={handleMouseEnterB3}
@@ -196,7 +196,7 @@ export default function Navbar() {
                 isHoveredB3 ? "hidden" : ""
               }`}
             >
-              <div className="linha border h-[30px] "></div>
+              <div className="linha border-l h-[30px] "></div>
             </div>
             <button
               className={` flex rounded-full  hover:border hover:bg-stone-100 ${
