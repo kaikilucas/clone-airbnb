@@ -1,6 +1,18 @@
 import React from "react";
 import airbnb from "../assets/airbnb.svg";
-import { Globe, List, User, MagnifyingGlass } from "@phosphor-icons/react";
+import {
+  Globe,
+  List,
+  User,
+  MagnifyingGlass,
+  Coffee,
+  SunHorizon,
+  Fire,
+  PianoKeys,
+  FlyingSaucer,
+} from "@phosphor-icons/react";
+import { FiAirplay } from "react-icons/fi";
+
 import { useState } from "react";
 import "./Navbar.css";
 
@@ -115,7 +127,7 @@ export default function Navbar() {
           </div>
         </nav>
         <div className=" flex justify-center items-center hidden sm:flex  ">
-          <nav className="flex  border  rounded-full h-[66px] shadow-md">
+          <nav className="flex  border  rounded-full h-[66px] shadow-lg">
             <button
               onMouseEnter={handleMouseEnterB1}
               onMouseLeave={handleMouseLeave}
@@ -136,13 +148,12 @@ export default function Navbar() {
                 placeholder="Buscar destinos"
               />
             </button>
-            <div
-              id="l1"
-              className={`flex items-center h-[60px] ${
-                isHoveredB1 ? "hidden" : ""
-              }`}
-            >
-              <div className="linha border-l h-[30px] "></div>
+            <div id="l1" className="flex items-center h-[60px] w-[3px]">
+              <div
+                className={`linha border-l h-[30px] ${
+                  isHoveredB1 ? "border-none" : ""
+                } `}
+              ></div>
             </div>
             <button
               onMouseEnter={handleMouseEnterB2}
@@ -163,13 +174,12 @@ export default function Navbar() {
                 id="campo2"
               />
             </button>
-            <div
-              id="l2"
-              className={`flex items-center h-[60px] ${
-                isHoveredB2 ? "hidden" : ""
-              }`}
-            >
-              <div className="linha border-l h-[30px] "></div>
+            <div id="l2" className="flex items-center h-[60px] w-[3px]">
+              <div
+                className={`linha border-l h-[30px] ${
+                  isHoveredB2 ? "border-none" : ""
+                } `}
+              ></div>
             </div>
             <button
               onMouseEnter={handleMouseEnterB3}
@@ -190,16 +200,15 @@ export default function Navbar() {
                 id="campo3"
               />
             </button>
-            <div
-              id="l3"
-              className={`flex items-center h-[60px] ${
-                isHoveredB3 ? "hidden" : ""
-              }`}
-            >
-              <div className="linha border-l h-[30px] "></div>
+            <div id="l3" className="flex items-center h-[60px] w-[3px]">
+              <div
+                className={`linha border-l h-[30px] ${
+                  isHoveredB3 ? "border-none" : ""
+                } `}
+              ></div>
             </div>
             <button
-              className={` flex rounded-full  hover:border hover:bg-stone-100 ${
+              className={` flex rounded-full  hover:border hover:bg-stone-100  w-[280px] ${
                 isHoveredI1 ? "hover:border-none hover:bg-white" : ""
               } `}
             >
@@ -242,12 +251,24 @@ export default function Navbar() {
       </div>
       <nav className="h-[90px] px-[80px] hidden md:block  ">
         <div className=" h-[78px] flex items-center justify-around w-full rounded-full  ">
-          <button className="border">1</button>
-          <button className="border">2</button>
-          <button className="border">3</button>
-          <button className="border">4</button>
-          <button className="border">5</button>
-          <button className="border">6</button>
+          <button className="">
+            <Coffee size={30} />
+          </button>
+          <button className="">
+            <SunHorizon size={30} />
+          </button>
+          <button className="">
+            <Fire size={30} />
+          </button>
+          <button className="">
+            <PianoKeys size={30} />
+          </button>
+          <button className="">
+            <FlyingSaucer size={30} />
+          </button>
+          <button className="">
+            <FiAirplay size={30} />
+          </button>
           <button className="border">7</button>
           <button className="border">8</button>
           <button className="border">9</button>
