@@ -12,6 +12,11 @@ import {
   FlyingSaucer,
 } from "@phosphor-icons/react";
 import { FiAirplay } from "react-icons/fi";
+import { GrKey } from "react-icons/gr";
+import { TbBeach } from "react-icons/tb";
+import { MdOutlineOtherHouses } from "react-icons/md";
+import emfrenteapraia from "../assets/icon/emfrenteapraia.svg";
+import cabanas from "../assets/icon/cabanas.svg";
 
 import { useState } from "react";
 import "./Navbar.css";
@@ -21,6 +26,11 @@ export default function Navbar() {
   const [isHoveredB2, setIsHoveredB2] = useState(false);
   const [isHoveredB3, setIsHoveredB3] = useState(false);
   const [isHoveredI1, setIsHoveredI1] = useState(false);
+  const [isClick1, setIsClick1] = useState(false);
+
+  const handleMouseclick = () => {
+    setIsClick1(!isClick1);
+  };
 
   const handleMouseEnterI1 = () => {
     setIsHoveredI1(true);
@@ -116,9 +126,10 @@ export default function Navbar() {
                   <Globe size={19} className="" />
                 </a>
               </li>
-              <li>
+
+              <li onClick={handleMouseclick} className=" flex items-center">
                 <button className="border flex items-center justify-center w-[86px]  h-[48px] rounded-full hover:shadow-md  ">
-                  <li className="flex flex-rom gap-2 ">
+                  <li className="flex  gap-2 ">
                     <List size={20} /> <User size={20} />
                   </li>
                 </button>
@@ -126,13 +137,43 @@ export default function Navbar() {
             </ul>
           </div>
         </nav>
+        <div
+          className={` w-full flex  justify-end ${
+            isClick1 ? "block" : "hidden"
+          } `}
+        >
+          <ul className="border shadow-md rounded-lg absolute w-[230px] h-[230px] flex flex-col items-start justify-between bg-white py-2  px-5 ">
+            <li>
+              <a href="#">Cadastre-se</a>
+            </li>
+
+            <li className="">
+              <a href="#">Entrar</a>
+            </li>
+
+            <li className="w-[230px] -mx-[21px]">
+              <hr className="border-l " />
+            </li>
+
+            <li>
+              <a href="#">Cartões de presentes</a>
+            </li>
+            <li className="">
+              <a href="#">Anuncie seu espaço no airbnb</a>
+            </li>
+
+            <li>
+              <a href="#">Central de ajuda</a>
+            </li>
+          </ul>
+        </div>
         <div className=" flex justify-center items-center hidden sm:flex  ">
           <nav className="flex  border  rounded-full h-[66px] shadow-lg">
             <button
               onMouseEnter={handleMouseEnterB1}
               onMouseLeave={handleMouseLeave}
               id="b1"
-              className=" hover:rounded-full w-[284px]  flex flex-col hover:bg-stone-100  justify-center hover:border p-[2px] "
+              className=" hover:rounded-full w-[284px]  flex flex-col hover:bg-stone-100  justify-center  "
             >
               <label
                 className="font-semibold cursor-pointer ml-8  text-[12px]"
@@ -148,7 +189,7 @@ export default function Navbar() {
                 placeholder="Buscar destinos"
               />
             </button>
-            <div id="l1" className="flex items-center h-[60px] w-[3px]">
+            <div id="l1" className="flex items-center h-[60px] w-[1px]">
               <div
                 className={`linha border-l h-[30px] ${
                   isHoveredB1 ? "border-none" : ""
@@ -159,7 +200,7 @@ export default function Navbar() {
               onMouseEnter={handleMouseEnterB2}
               onMouseLeave={handleMouseLeave}
               id="b2"
-              className=" rounded-full  hover:border w-[142.5px]  hover:bg-stone-100  flex flex-col justify-center"
+              className=" hover:rounded-full   w-[142.5px]  hover:bg-stone-100  flex flex-col justify-center"
             >
               <label
                 className="font-semibold cursor-pointer ml-8  text-[12px]"
@@ -174,7 +215,7 @@ export default function Navbar() {
                 id="campo2"
               />
             </button>
-            <div id="l2" className="flex items-center h-[60px] w-[3px]">
+            <div id="l2" className="flex items-center h-[60px] w-[1px]">
               <div
                 className={`linha border-l h-[30px] ${
                   isHoveredB2 ? "border-none" : ""
@@ -185,7 +226,7 @@ export default function Navbar() {
               onMouseEnter={handleMouseEnterB3}
               onMouseLeave={handleMouseLeave}
               id="b3"
-              className=" rounded-full  hover:border w-[142.5px]  hover:bg-stone-100 flex flex-col justify-center "
+              className=" hover:rounded-full   w-[142.5px]  hover:bg-stone-100 flex flex-col justify-center "
             >
               <label
                 className="font-semibold cursor-pointer ml-8  text-[12px]"
@@ -200,7 +241,7 @@ export default function Navbar() {
                 id="campo3"
               />
             </button>
-            <div id="l3" className="flex items-center h-[60px] w-[3px]">
+            <div id="l3" className="flex items-center h-[60px] w-[1px]">
               <div
                 className={`linha border-l h-[30px] ${
                   isHoveredB3 ? "border-none" : ""
@@ -208,7 +249,7 @@ export default function Navbar() {
               ></div>
             </div>
             <button
-              className={` flex rounded-full  hover:border hover:bg-stone-100  w-[280px] ${
+              className={` flex hover:rounded-full   hover:bg-stone-100  w-[280px] ${
                 isHoveredI1 ? "hover:border-none hover:bg-white" : ""
               } `}
             >
@@ -230,7 +271,7 @@ export default function Navbar() {
                     className=" w-[218px] h-[18px] text-[14px] ml-8 flex justify-start "
                     type="text"
                     placeholder="Hóspedes?"
-                    id="campo3"
+                    id="campo4"
                   />
                 </div>
               </nav>
@@ -252,28 +293,53 @@ export default function Navbar() {
       <nav className="h-[90px] px-[80px] hidden md:block  ">
         <div className=" h-[78px] flex items-center justify-around w-full rounded-full  ">
           <button className="">
+            <FlyingSaucer size={30} />
+            Uau!
+          </button>
+          <button className="">
+            <Fire size={30} />
+            Em alta
+          </button>
+          <button className="">
+            <GrKey size={30} />
+            Novidade
+          </button>
+          <button className="">
+            <TbBeach size={30} />
+            Praia
+          </button>
+          <button className="">
+            <MdOutlineOtherHouses size={30} />
+            Microcasas
+          </button>
+          <button className="">
+            <img
+              src={cabanas}
+              alt="cabanas"
+              className="w-[40px] h-[30px] "
+            ></img>
+            chalés
+          </button>
+          <button className="">
+            <img
+              src={emfrenteapraia}
+              alt="em frente a praia"
+              className="w-[30px] h-[30px]"
+            ></img>
+            Em frente à praia
+          </button>
+          <button className="">
             <Coffee size={30} />
           </button>
           <button className="">
             <SunHorizon size={30} />
           </button>
           <button className="">
-            <Fire size={30} />
-          </button>
-          <button className="">
             <PianoKeys size={30} />
-          </button>
-          <button className="">
-            <FlyingSaucer size={30} />
           </button>
           <button className="">
             <FiAirplay size={30} />
           </button>
-          <button className="border">7</button>
-          <button className="border">8</button>
-          <button className="border">9</button>
-          <button className="border">10</button>
-          <button className="border">11</button>
           <button className="border">12</button>
           <button className="border">13</button>
           <button className="border">14</button>
