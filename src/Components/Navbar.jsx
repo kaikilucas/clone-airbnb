@@ -32,6 +32,12 @@ export default function Navbar() {
     setIsClick1(!isClick1);
   };
 
+  const handleCloseMenu = () => {
+    if (isClick1 === true) {
+      setIsClick1(false);
+    }
+  };
+
   const handleMouseEnterI1 = () => {
     setIsHoveredI1(true);
   };
@@ -68,7 +74,7 @@ export default function Navbar() {
   };
 
   return (
-    <header id="aqui" className="header">
+    <header onClick={handleCloseMenu} id="aqui" className="header">
       {/* <nav className=" h-[70px] grid grid-cols-3  bg-neutral-100 ">
       <div className="h-full col-start-2 col-span-1 flex items-center justify-center ">
         <span className="text-neutral-700 text-xs font-['Poppins']">
