@@ -6,17 +6,19 @@ import {
   User,
   MagnifyingGlass,
   Coffee,
-  SunHorizon,
   Fire,
-  PianoKeys,
   FlyingSaucer,
 } from "@phosphor-icons/react";
-import { FiAirplay } from "react-icons/fi";
 import { GrKey } from "react-icons/gr";
 import { TbBeach } from "react-icons/tb";
-import { MdOutlineOtherHouses } from "react-icons/md";
+import { MdOutlineOtherHouses, MdOutlinePool } from "react-icons/md";
+import { HiOutlineHomeModern } from "react-icons/hi2";
+import { LuGrape } from "react-icons/lu";
+import { GiIsland } from "react-icons/gi";
+
 import emfrenteapraia from "../assets/icon/emfrenteapraia.svg";
 import cabanas from "../assets/icon/cabanas.svg";
+import bandejadecomida from "../assets/icon/bandejacomida.svg";
 
 import { useState } from "react";
 import "./Navbar.css";
@@ -299,30 +301,30 @@ export default function Navbar() {
       <nav className="h-[90px] px-[80px] hidden md:block  ">
         <div className=" h-[78px] flex items-center justify-around w-full rounded-full  ">
           <button className="">
-            <FlyingSaucer size={30} />
+            <FlyingSaucer size={22} />
             Uau!
           </button>
           <button className="">
-            <Fire size={30} />
+            <Fire size={22} />
             Em alta
           </button>
           <button className="">
-            <GrKey size={30} />
+            <GrKey size={22} />
             Novidade
           </button>
           <button className="">
-            <TbBeach size={30} />
+            <TbBeach size={22} />
             Praia
           </button>
           <button className="">
-            <MdOutlineOtherHouses size={30} />
+            <MdOutlineOtherHouses size={22} />
             Microcasas
           </button>
           <button className="">
             <img
               src={cabanas}
               alt="cabanas"
-              className="w-[40px] h-[30px] "
+              className="w-[30px] h-[22px] "
             ></img>
             chalés
           </button>
@@ -334,23 +336,36 @@ export default function Navbar() {
             ></img>
             Em frente à praia
           </button>
+
           <button className="">
-            <Coffee size={30} />
+            <img
+              src={bandejadecomida}
+              alt="bandeija de comida"
+              className="w-[30px] h-[30px]"
+            ></img>
+            Luxo
           </button>
           <button className="">
-            <SunHorizon size={30} />
+            <Coffee size={22} />
+            Pousadas
+          </button>
+
+          <button className="">
+            <MdOutlinePool size={22} />
+            Piscinas Incríveis
           </button>
           <button className="">
-            <PianoKeys size={30} />
+            <HiOutlineHomeModern size={22} />
+            Mansões
           </button>
           <button className="">
-            <FiAirplay size={30} />
+            <LuGrape size={22} />
+            Vinhedos
           </button>
-          <button className="border">12</button>
-          <button className="border">13</button>
-          <button className="border">14</button>
-          <button className="border">15</button>
-          <button className="border">16</button>
+          <button className="">
+            <GiIsland size={22} />
+            Tropical
+          </button>
         </div>
       </nav>
     </header>
