@@ -1,0 +1,108 @@
+const dados = [
+  {
+    id: 1,
+    categoria: 1,
+    imagens: [
+      "https://a0.muscache.com/im/pictures/baf536ff-b76d-4b62-91ed-9fdc4107bf52.jpg?im_w=720",
+      "https://a0.muscache.com/im/pictures/3b8adc7d-e152-4e44-be41-3fb50cc994cd.jpg?im_w=720",
+      "https://a0.muscache.com/im/pictures/81abc3be-ef4a-480a-a2d8-382d590addc0.jpg?im_w=720",
+    ],
+    cidade: "Florianópolis",
+    pais: "Brasil",
+    preco: 1286,
+    nota: "4,7",
+  },
+  {
+    id: 2,
+    categoria: 1,
+    imagens: [
+      "https://a0.muscache.com/im/pictures/68d7cace-6e07-417b-9817-1885b93f90ee.jpg?im_w=720",
+      "https://a0.muscache.com/im/pictures/903a1c9b-2248-46a1-94c9-7207c44fc95b.jpg?im_w=720",
+      "https://a0.muscache.com/im/pictures/a7fb61e9-0c04-43a1-83cd-efaeb9a2ae17.jpg?im_w=720",
+    ],
+    cidade: "Bombas",
+    pais: "Brasil",
+    preco: 399,
+    nota: "4,91",
+  },
+  {
+    id: 3,
+    categoria: 1,
+    imagens: [
+      "https://a0.muscache.com/im/pictures/cb6c9158-4219-45ce-bcb9-4cdcad4275f5.jpg?im_w=720",
+      "https://a0.muscache.com/im/pictures/4aea292e-20dc-4462-9408-9ac016077f01.jpg?im_w=720",
+      "https://a0.muscache.com/im/pictures/9a89dca2-6c7f-40e8-9f7c-0391c96983ce.jpg?im_w=720",
+    ],
+    cidade: "Governador Celso Ramos",
+    pais: "Brasil",
+    preco: 460,
+    nota: "5,0",
+  },
+  {
+    id: 4,
+    categoria: 1,
+    imagens: [
+      "https://a0.muscache.com/im/pictures/7ddf420c-61a0-4215-a3df-3e107ba31728.jpg?im_w=720",
+      "https://a0.muscache.com/im/pictures/4b010075-6af9-40a5-81e3-03fc5d31678b.jpg?im_w=720",
+      "https://a0.muscache.com/im/pictures/c4fe3f18-ca7b-4eb4-b8c5-b8f4a4f20512.jpg?im_w=720",
+    ],
+    cidade: "Pioneiros",
+    pais: "Brasil",
+    preco: 366,
+    nota: "5,0",
+  },
+  {
+    id: 5,
+    categoria: 1,
+    imagens: [
+      "https://a0.muscache.com/im/pictures/miso/Hosting-52666674/original/12708288-a629-4a2b-9497-631b22fa19b8.jpeg?im_w=720",
+      "https://a0.muscache.com/im/pictures/miso/Hosting-52666674/original/0ac72dd9-aed2-47f0-8d41-874020f88de2.jpeg?im_w=720",
+      "https://a0.muscache.com/im/pictures/miso/Hosting-52666674/original/83bc2774-8b9d-4240-b76c-4d1849bdc480.jpeg?im_w=720",
+    ],
+    cidade: "Porto Belo",
+    pais: "Brasil",
+    preco: 589,
+    nota: "4,2",
+  },
+  {
+    id: 6,
+    categoria: 1,
+    imagens: [
+      "https://a0.muscache.com/im/pictures/ec2bbbea-7982-4f23-9515-a17281ab75c3.jpg?im_w=720",
+      "https://a0.muscache.com/im/pictures/miso/Hosting-14834202/original/1c71bde1-660f-45c8-8daa-2f36334d4c21.jpeg?im_w=720",
+      "https://a0.muscache.com/im/pictures/8bbc6e59-d643-47bd-92c6-dc120cf686bd.jpg?im_w=720",
+    ],
+    cidade: "Bombinhas",
+    pais: "Brasil",
+    preco: 1299,
+    nota: "4,9",
+  },
+  {
+    id: 7,
+    categoria: 2,
+    imagens: [
+      "https://a0.muscache.com/im/pictures/miso/Hosting-43333686/original/b6f40ac4-3468-443e-81d8-ce3b6f526943.jpeg?im_w=720",
+      "https://a0.muscache.com/im/pictures/miso/Hosting-43333686/original/ce61507f-5a20-46e1-93b9-098faacaa6de.jpeg?im_w=720",
+      "https://a0.muscache.com/im/pictures/miso/Hosting-43333686/original/81cb677f-65da-420e-a5f6-acd4fa188815.jpeg?im_w=720",
+    ],
+    cidade: "São Bento do Sul",
+    pais: "Brasil",
+    preco: 723,
+    nota: "4,97",
+  },
+  {
+    id: 8,
+    categoria: 2,
+    imagens: [
+      "https://a0.muscache.com/im/pictures/miso/Hosting-22319550/original/cc1fd71d-1a91-4026-99f8-c2cbffefd68f.jpeg?im_w=720",
+      "https://a0.muscache.com/im/pictures/miso/Hosting-22319550/original/e08d07a2-4eaa-4930-9c22-132072aee408.jpeg?im_w=720",
+      "https://a0.muscache.com/im/pictures/miso/Hosting-22319550/original/839c4a53-0cd8-447e-adb7-fe5bdcff7bf6.jpeg?im_w=720",
+    ],
+    cidade: "Paraty",
+    pais: "Brasil",
+    preco: 1160,
+    nota: "4,93",
+  },
+];
+
+export default dados;

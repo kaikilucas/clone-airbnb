@@ -21,7 +21,7 @@ import cabanas from "../assets/icon/cabanas.svg";
 import bandejadecomida from "../assets/icon/bandejacomida.svg";
 
 import { useState } from "react";
-import "./Navbar.css";
+import "../Components/css/Navbar.css";
 
 export default function Navbar() {
   const [isHoveredB1, setIsHoveredB1] = useState(false);
