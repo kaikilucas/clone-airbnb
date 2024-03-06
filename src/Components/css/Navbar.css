@@ -1,5 +1,5 @@
 .header {
-  @apply w-full h-[100px] sm:h-[258px] sticky top-0  bg-white;
+  @apply w-full h-[100px] sm:h-[258px] sticky top-0  z-50 bg-white;
 }
 
 .camada {

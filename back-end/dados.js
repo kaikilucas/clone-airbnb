@@ -1,4 +1,175 @@
-const dados = [
+export const categorias = [
+  {
+    id: 1,
+    imagem:
+      "https://a0.muscache.com/pictures/bcd1adc0-5cee-4d7a-85ec-f6730b0f8d0c.jpg",
+    titulo: "Em frente à praia",
+  },
+  {
+    id: 2,
+    imagem:
+      "https://a0.muscache.com/pictures/732edad8-3ae0-49a8-a451-29a8010dcc0c.jpg",
+    titulo: "Chalés",
+  },
+  {
+    id: 3,
+    imagem:
+      "https://a0.muscache.com/pictures/3b1eb541-46d9-4bef-abc4-c37d77e3c21b.jpg",
+    titulo: "Vistas incríveis",
+  },
+  {
+    id: 4,
+    imagem:
+      "https://a0.muscache.com/pictures/677a041d-7264-4c45-bb72-52bff21eb6e8.jpg",
+    titulo: "Na beira do lago",
+  },
+  {
+    id: 5,
+    imagem:
+      "https://a0.muscache.com/pictures/eb7ba4c0-ea38-4cbb-9db6-bdcc8baad585.jpg",
+    titulo: "Quartos privativos",
+  },
+  {
+    id: 6,
+    imagem:
+      "https://a0.muscache.com/pictures/3fb523a0-b622-4368-8142-b5e03df7549b.jpg",
+    titulo: "Piscinas incríveis",
+  },
+  {
+    id: 7,
+    imagem:
+      "https://a0.muscache.com/pictures/6ad4bd95-f086-437d-97e3-14d12155ddfe.jpg",
+    titulo: "No interior",
+  },
+  {
+    id: 8,
+    imagem:
+      "https://a0.muscache.com/pictures/aaa02c2d-9f0d-4c41-878a-68c12ec6c6bd.jpg",
+    titulo: "Fazendas",
+  },
+  {
+    id: 9,
+    imagem:
+      "https://a0.muscache.com/pictures/5ed8f7c7-2e1f-43a8-9a39-4edfc81a3325.jpg",
+    titulo: "Pousadas",
+  },
+  {
+    id: 10,
+    imagem:
+      "https://a0.muscache.com/pictures/35919456-df89-4024-ad50-5fcb7a472df9.jpg",
+    titulo: "Microcasas",
+  },
+  {
+    id: 11,
+    imagem:
+      "https://a0.muscache.com/pictures/a4634ca6-1407-4864-ab97-6e141967d782.jpg",
+    titulo: "Lago",
+  },
+  {
+    id: 12,
+    imagem:
+      "https://a0.muscache.com/pictures/1d477273-96d6-4819-9bda-9085f809dad3.jpg",
+    titulo: "Casas triangulares",
+  },
+  {
+    id: 13,
+    imagem:
+      "https://a0.muscache.com/pictures/c5a4f6fc-c92c-4ae8-87dd-57f1ff1b89a6.jpg",
+    titulo: "Uau!",
+  },
+  {
+    id: 14,
+    imagem:
+      "https://a0.muscache.com/pictures/78ba8486-6ba6-4a43-a56d-f556189193da.jpg",
+    titulo: "Mansões",
+  },
+  {
+    id: 15,
+    imagem:
+      "https://a0.muscache.com/pictures/8e507f16-4943-4be9-b707-59bd38d56309.jpg",
+    titulo: "Ilhas",
+  },
+  {
+    id: 16,
+    imagem:
+      "https://a0.muscache.com/pictures/1b6a8b70-a3b6-48b5-88e1-2243d9172c06.jpg",
+    titulo: "Castelos",
+  },
+  {
+    id: 17,
+    imagem:
+      "https://a0.muscache.com/pictures/c8e2ed05-c666-47b6-99fc-4cb6edcde6b4.jpg",
+    titulo: "Luxe",
+  },
+  {
+    id: 18,
+    imagem:
+      "https://a0.muscache.com/pictures/4d4a4eba-c7e4-43eb-9ce2-95e1d200d10e.jpg",
+    titulo: "Casas na árvore",
+  },
+  {
+    id: 19,
+    imagem:
+      "https://a0.muscache.com/pictures/c0a24c04-ce1f-490c-833f-987613930eca.jpg",
+    titulo: "Parques nacionais",
+  },
+  {
+    id: 20,
+    imagem:
+      "https://a0.muscache.com/pictures/60ff02ae-d4a2-4d18-a120-0dd274a95925.jpg",
+    titulo: "Vinhedos",
+  },
+  {
+    id: 21,
+    imagem:
+      "https://a0.muscache.com/pictures/ee9e2a40-ffac-4db9-9080-b351efc3cfc4.jpg",
+    titulo: "Tropical",
+  },
+  {
+    id: 22,
+    imagem:
+      "https://a0.muscache.com/pictures/0ff9740e-52a2-4cd5-ae5a-94e1bfb560d6.jpg",
+    titulo: "Contêineres",
+  },
+  {
+    id: 23,
+    imagem:
+      "https://a0.muscache.com/pictures/ca25c7f3-0d1f-432b-9efa-b9f5dc6d8770.jpg",
+    titulo: "Acampamentos",
+  },
+  {
+    id: 24,
+    imagem:
+      "https://a0.muscache.com/pictures/957f8022-dfd7-426c-99fd-77ed792f6d7a.jpg",
+    titulo: "Surf",
+  },
+  {
+    id: 25,
+    imagem:
+      "https://a0.muscache.com/pictures/ed8b9e47-609b-44c2-9768-33e6a22eccb2.jpg",
+    titulo: "Cidades famosas",
+  },
+  {
+    id: 26,
+    imagem:
+      "https://a0.muscache.com/pictures/f60700bc-8ab5-424c-912b-6ef17abc479a.jpg",
+    titulo: "Celeiros",
+  },
+  {
+    id: 27,
+    imagem:
+      "https://a0.muscache.com/pictures/4221e293-4770-4ea8-a4fa-9972158d4004.jpg",
+    titulo: "Grutas",
+  },
+  {
+    id: 28,
+    imagem:
+      "https://a0.muscache.com/pictures/687a8682-68b3-4f21-8d71-3c3aef6c1110.jpg",
+    titulo: "Barcos",
+  },
+];
+
+export const acomodacoes = [
   {
     id: 1,
     categoria: 1,
@@ -104,5 +275,3 @@ const dados = [
     nota: "4,93",
   },
 ];
-
-export default dados;
