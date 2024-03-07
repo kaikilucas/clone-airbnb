@@ -37,12 +37,12 @@ function Main() {
   }
 
   return (
-    <main className=" w-full sm:px-[80px]  ">
+    <main className=" w-full sm:px-[80px] sm:mt-0 mt-[80px] ">
       <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-4 xl:grid-cols-6  p-6 gap-5">
         {acomodacoes.map((acomodacao, index) => (
           <div key={acomodacao.id} className="">
             <Swiper
-              className="mySwiper img-content  w-full h-[250px] border rounded-xl"
+              className="img-content"
               navigation={true}
               pagination={true}
               modules={[Pagination, Navigation]}
@@ -50,11 +50,11 @@ function Main() {
               {acomodacao.imagens.map((imagem, index) => (
                 <SwiperSlide
                   key={index}
-                  className="w-full h-[250px] cursor-pointer"
+                  className="slideac w-full h-[250px] cursor-pointer"
                 >
                   <img
                     src={imagem}
-                    className=" h-[250px] w-full object-cover object-left "
+                    className="img h-[250px] w-full object-cover object-left "
                   ></img>
                 </SwiperSlide>
               ))}
@@ -84,7 +84,7 @@ function Main() {
             <p className="text-slate-500 ">
               {getRandomInt(1, 31)} de jan - {getRandomInt(1, 28)} de fev
             </p>
-            <p className="font-bold mt-3">
+            <p className="font-bold mt-3 mb-6">
               R$ {acomodacao.preco.toLocaleString("pt-br")} noite
             </p>
           </div>

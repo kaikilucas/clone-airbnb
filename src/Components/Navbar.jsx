@@ -1,34 +1,33 @@
 import React from "react";
 import airbnb from "../assets/airbnb.svg";
-import {
-  Globe,
-  List,
-  User,
-  MagnifyingGlass,
-  Coffee,
-  Fire,
-  FlyingSaucer,
-} from "@phosphor-icons/react";
-import { GrKey } from "react-icons/gr";
-import { TbBeach } from "react-icons/tb";
-import { MdOutlineOtherHouses, MdOutlinePool } from "react-icons/md";
-import { HiOutlineHomeModern } from "react-icons/hi2";
-import { LuGrape } from "react-icons/lu";
-import { GiIsland } from "react-icons/gi";
+import { categorias } from "../../back-end/dados";
 
-import emfrenteapraia from "../assets/icon/emfrenteapraia.svg";
-import cabanas from "../assets/icon/cabanas.svg";
-import bandejadecomida from "../assets/icon/bandejacomida.svg";
+import { Globe, List, User, MagnifyingGlass } from "@phosphor-icons/react";
 
 import { useState } from "react";
-import "../Components/css/Navbar.css";
+import "./css/Navbar.css";
+
+// Core modules imports are same as usual
+import { Pagination, Navigation } from "swiper/modules";
+// Direct React component imports
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Styles must use direct files imports
+import "swiper/css"; // core Swiper
+import "swiper/css/navigation"; // Navigation module
+import "swiper/css/pagination"; // Pagination module
 
 export default function Navbar() {
+  const [idClicado, setIdClicado] = useState(1);
   const [isHoveredB1, setIsHoveredB1] = useState(false);
   const [isHoveredB2, setIsHoveredB2] = useState(false);
   const [isHoveredB3, setIsHoveredB3] = useState(false);
   const [isHoveredI1, setIsHoveredI1] = useState(false);
   const [isClick1, setIsClick1] = useState(false);
+
+  const handleClick = (e, id) => {
+    setIdClicado(id);
+  };
 
   const handleMouseclick = () => {
     setIsClick1(!isClick1);
@@ -146,11 +145,11 @@ export default function Navbar() {
           </div>
         </nav>
         <div
-          className={` w-full flex  justify-end ${
+          className={` w-full flex  justify-end sm:mt-0 -mt-5 ${
             isClick1 ? "block" : "hidden"
           } `}
         >
-          <ul className="border shadow-md rounded-lg absolute w-[230px] h-[230px] flex flex-col items-start justify-between bg-white py-2  px-5 ">
+          <ul className="border shadow-md rounded-lg absolute w-[230px] h-[230px] flex flex-col items-start justify-between bg-white py-2  px-5 z-50 ">
             <li>
               <a href="#">Cadastre-se</a>
             </li>
@@ -298,8 +297,38 @@ export default function Navbar() {
           </nav>
         </div>
       </div>
-      <nav className="h-[90px] px-[80px] hidden md:block  ">
-        <div className=" h-[78px] flex items-center justify-around w-full rounded-full  ">
+      <nav className="">
+        <div className="sm:h-[90px] sm:w-full  sm:px-[80px] border  row sm:mt-0 -mt-[70px] w-full sm:block bg-white ">
+          <Swiper
+            slidesPerView={14}
+            spaceBetween={7}
+            slidesPerGroup={10}
+            className="sw-categoria"
+            navigation={true}
+            pagination={false}
+            modules={[Pagination, Navigation]}
+          >
+            {categorias.map((categoria, index) => (
+              <SwiperSlide
+                onClick={(e) => handleClick(e, categoria.id)}
+                key={categoria.id}
+                virtualIndex={index}
+                className={` sw-slide cursor-pointer border ${
+                  categoria.id === idClicado ? "active" : ""
+                } `}
+              >
+                <img
+                  className="sw-img "
+                  src={categoria.imagem}
+                  alt={categoria.titulo}
+                />
+                <div className="mt-2">{categoria.titulo}</div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+
+        {/* <div className=" h-[78px] flex items-center justify-around w-full rounded-full  ">
           <button className="">
             <FlyingSaucer size={22} />
             Uau!
@@ -366,7 +395,7 @@ export default function Navbar() {
             <GiIsland size={22} />
             Tropical
           </button>
-        </div>
+        </div> */}
       </nav>
     </header>
   );

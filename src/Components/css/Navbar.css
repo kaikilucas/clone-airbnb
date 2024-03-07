@@ -1,5 +1,5 @@
 .header {
-  @apply w-full h-[100px] sm:h-[258px] sticky top-0  z-50 bg-white;
+  @apply w-full h-[100px] sm:h-[258px] sticky top-0  z-50 bg-white border;
 }
 
 .camada {
@@ -34,4 +34,77 @@ input[type="search"]::placeholder {
 
 article {
   margin-bottom: 20px;
+}
+
+/*SWIPER*/
+
+.swiper.sw-categoria .swiper-pagination-bullet-active {
+  background-color: rgb(255, 255, 255) !important;
+}
+
+.swiper.sw-categoria {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.swiper-slide.sw-slide {
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  height: 90px;
+  opacity: 0.5;
+  /* Center slide text vertically */
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid 2px white;
+}
+.swiper-slide.sw-slide:hover {
+  opacity: 1;
+}
+.swiper-slide.sw-slide div {
+  border-bottom: solid 2px rgb(255, 255, 255);
+  padding-bottom: 8px;
+}
+.swiper-slide.sw-slide:hover div {
+  border-bottom: 2px solid gray;
+}
+
+.swiper-slide.sw-slide.active {
+  opacity: 1;
+}
+
+.swiper-slide.sw-slide.active div {
+  border-bottom: 2px solid black;
+}
+
+.swiper-slide .sw-img {
+  display: block;
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
+
+.swiper.sw-categoria .swiper-button-prev::after {
+  content: " " !important;
+}
+
+.swiper.sw-categoria .swiper-button-next::after {
+  content: " " !important;
+  width: 8px;
+  height: 8px;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  transform: rotate(-45deg);
+}
+.swiper.sw-categoria .swiper-button-next {
+  background: white;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #ccc;
+  border-radius: 35px;
+  box-shadow: 5px 10px 20px 30px white;
 }
