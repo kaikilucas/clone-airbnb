@@ -90,6 +90,19 @@ article {
 
 .swiper.sw-categoria .swiper-button-prev::after {
   content: " " !important;
+  width: 8px;
+  height: 8px;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  transform: rotate(140deg);
+}
+
+.swiper.sw-categoria .swiper-button-prev {
+  background: white;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #ccc;
+  border-radius: 35px;
 }
 
 .swiper.sw-categoria .swiper-button-next::after {
@@ -107,4 +120,9 @@ article {
   border: 1px solid #ccc;
   border-radius: 35px;
   box-shadow: 5px 10px 20px 30px white;
+}
+
+.swiper.sw-categoria .swiper-button-next.swiper-button-disabled,
+.swiper.sw-categoria .swiper-button-prev.swiper-button-disabled {
+  opacity: 0;
 }

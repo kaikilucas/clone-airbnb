@@ -298,11 +298,29 @@ export default function Navbar() {
         </div>
       </div>
       <nav className="">
-        <div className="sm:h-[90px] sm:w-full  sm:px-[80px] border  row sm:mt-0 -mt-[70px] w-full sm:block bg-white ">
+        <div className="sm:h-[90px] sm:w-full  sm:px-[80px]   row sm:mt-0 -mt-[70px] w-full sm:block bg-white ">
           <Swiper
-            slidesPerView={14}
-            spaceBetween={7}
-            slidesPerGroup={10}
+            breakpoints={{
+              100: {
+                slidesPerView: 3,
+                slidesPerGroup: 1,
+                spaceBetween: 1,
+              },
+
+              //JANELA MAIOR QUE 1400
+              1400: {
+                slidesPerView: 10,
+                slidesPerGroup: 10,
+                spaceBetween: 7,
+              },
+
+              //JANELA MAIOR QUE 1600
+              1600: {
+                slidesPerView: 14,
+                slidesPerGroup: 13,
+                spaceBetween: 7,
+              },
+            }}
             className="sw-categoria"
             navigation={true}
             pagination={false}
@@ -313,7 +331,7 @@ export default function Navbar() {
                 onClick={(e) => handleClick(e, categoria.id)}
                 key={categoria.id}
                 virtualIndex={index}
-                className={` sw-slide cursor-pointer border ${
+                className={` sw-slide cursor-pointer  ${
                   categoria.id === idClicado ? "active" : ""
                 } `}
               >
