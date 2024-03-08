@@ -19,13 +19,19 @@ import "swiper/css/pagination"; // Pagination module
 
 export default function Navbar() {
   const [idClicado, setIdClicado] = useState(1);
+  const [elementoAtivo, setElementoAtivo] = useState(1);
   const [isHoveredB1, setIsHoveredB1] = useState(false);
   const [isHoveredB2, setIsHoveredB2] = useState(false);
   const [isHoveredB3, setIsHoveredB3] = useState(false);
   const [isHoveredI1, setIsHoveredI1] = useState(false);
   const [isClick1, setIsClick1] = useState(false);
 
+  const selecionarElemento = (id) => {
+    setElementoAtivo(id);
+  };
+
   const handleClick = (e, id) => {
+    console.log("A categoria clicada atual é: " + id);
     setIdClicado(id);
   };
 
@@ -76,20 +82,6 @@ export default function Navbar() {
 
   return (
     <header onClick={handleCloseMenu} id="aqui" className="header ">
-      {/* <nav className=" h-[70px] grid grid-cols-3  bg-neutral-100 ">
-      <div className="h-full col-start-2 col-span-1 flex items-center justify-center ">
-        <span className="text-neutral-700 text-xs font-['Poppins']">
-          Hey,
-        </span>
-        <span className="text-neutral-700 text-xs font-semibold font-['Poppins']">
-          {" "}
-          Where are you going?
-        </span>
-      </div>
-      <div className="h-full flex justify-end  items-center  mb-4  mx-3 ">
-        <img src={Close} className="max-w-3 max-h-3 " alt="React logo" />
-      </div>
-    </nav> */}
       <div className="camada">
         <nav className="nav">
           <a href="#" className="logo">
@@ -101,16 +93,37 @@ export default function Navbar() {
           </a>
 
           <ul className="lista">
-            <li className="font-semibold">
-              <a href="#">Acomodações</a>
+            <li
+              id="1"
+              className={` hover:rounded-full hover:bg-stone-100 w-[130px] h-[40px] flex items-center justify-center   ${
+                elementoAtivo === 1 ? "activee hover:bg-white" : ""
+              }`}
+            >
+              <a href="#" onClick={() => selecionarElemento(1)}>
+                Acomodações
+              </a>
             </li>
-            <li className="hover:rounded-full hover:bg-stone-100 w-[130px] h-[40px] justify-center items-center flex ml-2 ">
-              <a href="#" className="mx-5 ">
+            <li
+              className={`hover:rounded-full hover:bg-stone-100 w-[130px] h-[40px] justify-center items-center flex ml-2 ${
+                elementoAtivo === 2 ? "activee   hover:bg-white" : ""
+              }`}
+            >
+              <a
+                href="#"
+                onClick={() => selecionarElemento(2)}
+                className="mx-5"
+              >
                 Experiências
               </a>
             </li>
-            <li className="hover:rounded-full hover:bg-stone-100  w-[160px] h-[40px] justify-center items-center flex">
-              <a href="#">Experiências online</a>
+            <li
+              className={`hover:rounded-full hover:bg-stone-100 w-[160px] h-[40px] justify-center items-center flex ${
+                elementoAtivo === 3 ? "activee   hover:bg-white" : ""
+              }`}
+            >
+              <a href="#" onClick={() => selecionarElemento(3)}>
+                Experiências online
+              </a>
             </li>
           </ul>
 
@@ -345,100 +358,7 @@ export default function Navbar() {
             ))}
           </Swiper>
         </div>
-
-        {/* <div className=" h-[78px] flex items-center justify-around w-full rounded-full  ">
-          <button className="">
-            <FlyingSaucer size={22} />
-            Uau!
-          </button>
-          <button className="">
-            <Fire size={22} />
-            Em alta
-          </button>
-          <button className="">
-            <GrKey size={22} />
-            Novidade
-          </button>
-          <button className="">
-            <TbBeach size={22} />
-            Praia
-          </button>
-          <button className="">
-            <MdOutlineOtherHouses size={22} />
-            Microcasas
-          </button>
-          <button className="">
-            <img
-              src={cabanas}
-              alt="cabanas"
-              className="w-[30px] h-[22px] "
-            ></img>
-            chalés
-          </button>
-          <button className="">
-            <img
-              src={emfrenteapraia}
-              alt="em frente a praia"
-              className="w-[30px] h-[30px]"
-            ></img>
-            Em frente à praia
-          </button>
-
-          <button className="">
-            <img
-              src={bandejadecomida}
-              alt="bandeija de comida"
-              className="w-[30px] h-[30px]"
-            ></img>
-            Luxo
-          </button>
-          <button className="">
-            <Coffee size={22} />
-            Pousadas
-          </button>
-
-          <button className="">
-            <MdOutlinePool size={22} />
-            Piscinas Incríveis
-          </button>
-          <button className="">
-            <HiOutlineHomeModern size={22} />
-            Mansões
-          </button>
-          <button className="">
-            <LuGrape size={22} />
-            Vinhedos
-          </button>
-          <button className="">
-            <GiIsland size={22} />
-            Tropical
-          </button>
-        </div> */}
       </nav>
     </header>
   );
 }
-
-// const btn1 = document.getElementById("b1");
-// const btn2 = document.getElementById("b2");
-// const btn3 = document.getElementById("b3");
-// const btn4 = document.getElementById("b4");
-
-// const linha1 = document.getElementById("l1");
-// const linha2 = document.getElementById("l2");
-// const linha3 = document.getElementById("l3");
-
-// btn1.addEventListener("mouseover", () => {
-//   linha1.classList.toggle("hidden");
-// });
-
-// btn3.addEventListener("mouseover", () => {
-//   linha2.classList.toggle("hidden");
-//   linha3.classList.toggle("hidden");
-//   // linha1.className += "hidden ";
-// });
-
-// btn4.addEventListener("mouseover", () => {
-//   linha3.classList.toggle("hidden");
-//   // linha1.className += "hidden ";
-// });

@@ -126,3 +126,12 @@ article {
 .swiper.sw-categoria .swiper-button-prev.swiper-button-disabled {
   opacity: 0;
 }
+
+.lista {
+  opacity: 0.8;
+}
+
+/*CLASSE PARA A LISTA DO TOPO */
+.activee {
+  font-weight: 500;
+}
