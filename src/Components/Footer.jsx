@@ -13,16 +13,20 @@ function Footer() {
   return (
     <footer>
       <div>
-        <ul className="border-gray-500 border-t flex justify-between  h-[70px] items-center bg-white  fixed bottom-0  z-50">
+        <ul className="border-gray-500 border-t flex justify-between  h-[70px] items-center bg-white  fixed bottom-0  z-50 sm:hidden w-full">
           <li className=" ">
             <a
               onClick={() => handleClick(1)}
               href="#"
-              className={`w-[160px] h-[70px] flex flex-col items-center justify-center opacity-[0.5] ${
+              className={`w-[100px] h-[70px] flex flex-col items-center justify-center opacity-[0.5] ${
                 click === 1 ? "activefooter opacity-[1]" : ""
               }`}
             >
-              <Compass size={27} weight="duotone" className="mb-[5px]" />
+              <Compass
+                size={27}
+                weight="duotone"
+                className={`mb-[5px]  ${click === 1 ? "activefooter2 " : ""} `}
+              />
               Explorar
             </a>
           </li>
@@ -30,12 +34,16 @@ function Footer() {
             <a
               onClick={() => handleClick(2)}
               href="#"
-              className={`w-[160px] h-[70px] flex flex-col items-center justify-center opacity-[0.5] ${
+              className={`w-[100px] h-[70px] flex flex-col items-center justify-center opacity-[0.5] ${
                 click === 2 ? "activefooter opacity-[1]" : ""
               }`}
             >
               {" "}
-              <Heart size={27} weight="duotone" className="mb-[5px]" />
+              <Heart
+                size={27}
+                weight="duotone"
+                className={`mb-[5px]  ${click === 2 ? "activefooter2 " : ""} `}
+              />
               Favoritos
             </a>
           </li>
@@ -43,11 +51,15 @@ function Footer() {
             <a
               onClick={() => handleClick(3)}
               href="#"
-              className={`w-[160px] h-[70px] flex flex-col items-center justify-center opacity-[0.5] ${
+              className={`w-[100px] h-[70px] flex flex-col items-center justify-center opacity-[0.5] ${
                 click === 3 ? "activefooter  opacity-[1]" : ""
               }`}
             >
-              <UserCircle size={27} weight="duotone" className="mb-[5px]" />
+              <UserCircle
+                size={27}
+                weight="duotone"
+                className={`mb-[5px]  ${click === 3 ? "activefooter2 " : ""} `}
+              />
               Usuário
             </a>
           </li>

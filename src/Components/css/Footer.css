@@ -1,7 +1,11 @@
 .activefooter {
   border-top: solid 2px red;
+  color: red;
 }
 
 .activefooter2 {
+  color: red;
+}
+.activefooter3 {
   border-top: rgb(255, 255, 255);
 }
