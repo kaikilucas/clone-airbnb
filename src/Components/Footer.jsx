@@ -36,7 +36,7 @@ function Footer() {
             >
               {" "}
               <Heart size={27} weight="duotone" className="mb-[5px]" />
-              Favoritos
+              Favoritoss
             </a>
           </li>
           <li className=" ">
