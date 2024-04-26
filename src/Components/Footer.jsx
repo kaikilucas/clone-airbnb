@@ -25,7 +25,7 @@ function Footer() {
               <Compass
                 size={27}
                 weight="duotone"
-                className={`mb-[5px]  ${click === 1 ? "activefooter2 " : ""} `}
+                className={`mb-[5px]   ${click === 1 ? "activefooter2 " : ""} `}
               />
               Explorar
             </a>

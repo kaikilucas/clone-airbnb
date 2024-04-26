@@ -226,7 +226,6 @@ export const acomodacoes = [
     id: 5,
     categoria: 1,
     imagens: [
-      "https://a0.muscache.com/im/pictures/miso/Hosting-52666674/original/12708288-a629-4a2b-9497-631b22fa19b8.jpeg?im_w=720",
       "https://a0.muscache.com/im/pictures/miso/Hosting-52666674/original/0ac72dd9-aed2-47f0-8d41-874020f88de2.jpeg?im_w=720",
       "https://a0.muscache.com/im/pictures/miso/Hosting-52666674/original/83bc2774-8b9d-4240-b76c-4d1849bdc480.jpeg?im_w=720",
     ],
